@@ -6,8 +6,6 @@ navigation: menu
 
 ## Coaching, team building, formation & conseil
 
-[GitHub](http://github.com)
-
 Notre vocation
 ## Relier l'institution et le corps social
 Toute organisation, entreprise ou association, vit un équilibre dialectique entre :
