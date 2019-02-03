@@ -2,6 +2,7 @@
 layout: default
 title: Responsable du changement
 category: Nos formations
+order: 2
 ---
 
 ### Objectifs de la formation

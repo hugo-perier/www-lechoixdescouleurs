@@ -2,6 +2,7 @@
 layout: default
 title: Construire un projet de transformation d'entreprise
 category: Nos formations
+order: 1
 ---
 
 Pour tout responsable de projet de transformation en entreprise et qui doit intégrer l’accompagnement humain du changement dans l’organisation.

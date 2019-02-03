@@ -2,6 +2,7 @@
 layout: default
 title: Accueil
 navigation: menu
+order: 1
 ---
 
 ## Coaching, team building, formation & conseil

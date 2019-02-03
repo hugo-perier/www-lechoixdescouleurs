@@ -1,14 +1,16 @@
 <nav>
   <ul>
-    {% for p in site.pages %}
-    {% if p.navigation == "menu" %}
-      <li {% if p.url == page.url %} class="active" {% endif %}>
-        <a href="{{ p.url }}">{{ p.title }}</a>
+    {% assign menu = site.pages | sort:"order" %}
+    {% for menu-item in menu %}
+    {% if menu-item.navigation == "menu" %}
+      <li {% if menu-item.url == page.url %} class="active" {% endif %}>
+        <a href="{{ menu-item.url }}">{{ menu-item.title }}</a>
         <ul>
-          {% for subp in site.pages %}
-          {% if subp.category == p.title %}
+          {% assign submenu = site.pages | sort:"order" %}
+          {% for submenu-item in submenu %}
+          {% if submenu-item.category == menu-item.title %}
           <li>
-            <a href="{{ subp.url }}">{{ subp.title }}</a>
+            <a href="{{ submenu-item.url }}">{{ submenu-item.title }}</a>
           </li>
           {% endif %}
           {% endfor %}

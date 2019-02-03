@@ -2,6 +2,7 @@
 layout: default
 title: Qui sommes-nous ?
 navigation: menu
+order: 3
 ---
 
 Spécialisé dans l’accompagnement des changements et des transformations, Le choix des couleurs accompagne les organisations, les équipes et les personnes dans les changements afin qu’ils puissent se rejoindre et donner le meilleur d’eux-mêmes, dans le respect de leur nature et de leurs ambitions respectives.
