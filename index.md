@@ -3,10 +3,8 @@ id: home
 layout: default
 navigation: menu
 order: 1
-title: Accueil
+title: Coaching, team building, formation & conseil
 ---
-
-## Coaching, team building, formation & conseil
 
 Notre vocation
 ## Relier l'institution et le corps social
