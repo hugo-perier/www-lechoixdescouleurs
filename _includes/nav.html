@@ -5,16 +5,18 @@
     {% if menu-item.navigation == "menu" %}
       <li {% if menu-item.url == page.url %} class="active" {% endif %}>
         <a href="{{ menu-item.url }}">{{ menu-item.title }}</a>
-        <ul>
+        {% if menu-item.title == "Nos formations" %}
+        <ul id="submenu">
           {% assign submenu = site.pages | sort:"order" %}
           {% for submenu-item in submenu %}
           {% if submenu-item.category == menu-item.title %}
-          <li>
+          <li {% if submenu-item.url == page.url %} class="active" {% endif %}>
             <a href="{{ submenu-item.url }}">{{ submenu-item.title }}</a>
           </li>
           {% endif %}
           {% endfor %}
         </ul>
+        {% endif %}
       </li>
     {% endif %}
     {% endfor %}
