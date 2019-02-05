@@ -1,8 +1,9 @@
 ---
+id: references
 layout: default
-title: Nos références
 navigation: menu
 order: 4
+title: Nos références
 ---
 
 ### Nous avons travaillé avec

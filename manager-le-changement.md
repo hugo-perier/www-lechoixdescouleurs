@@ -1,8 +1,9 @@
 ---
-layout: default
-title: Manager le changement
 category: Nos formations
+id: formation
+layout: default
 order: 3
+title: Manager le changement
 ---
 
 Spécialisé dans l’accompagnement humain des transformations en entreprise, Le Choix des Couleurs a développé une expertise et mis en place des moyens pédagogiques qui visent à permettre aux personnes formées d’acquérir les techniques, outils et méthodes pour faciliter et accompagner leurs équipes dans les changements structurels et culturels qu’elles sont amenées à vivre dans le cadre de leur travail.

@@ -1,8 +1,9 @@
 ---
-layout: default
-title: Responsable du changement
 category: Nos formations
+id: formation
+layout: default
 order: 2
+title: Responsable du changement
 ---
 
 ### Objectifs de la formation

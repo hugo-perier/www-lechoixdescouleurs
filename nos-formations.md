@@ -1,8 +1,9 @@
 ---
+id: formations
 layout: default
-title: Nos formations
 navigation: menu
 order: 2
+title: Nos formations
 ---
 
 Découvrez nos formations

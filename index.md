@@ -1,8 +1,9 @@
 ---
+id: home
 layout: default
-title: Accueil
 navigation: menu
 order: 1
+title: Accueil
 ---
 
 ## Coaching, team building, formation & conseil
