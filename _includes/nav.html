@@ -5,7 +5,7 @@
     {% if menu-item.navigation == "menu" %}
       <li {% if menu-item.url == page.url %} class="active" {% endif %}>
         <a href="{{ menu-item.url }}">{{ menu-item.title }}</a>
-        {% if menu-item.title == "Nos formations" %}
+        {% if menu-item.id == "formations" %}
         <ul id="submenu">
           {% assign submenu = site.pages | sort:"order" %}
           {% for submenu-item in submenu %}
