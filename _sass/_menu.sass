@@ -1,0 +1,89 @@
+nav
+  border-right: solid 1px $grey
+
+  ul
+    list-style-type: none
+    padding-left: 0
+
+    li
+      a
+        display: block
+        text-decoration: none
+        padding: .75rem 1rem .75rem 3.5rem
+
+  > ul
+    margin: 0
+    padding-top: 2em
+    position: sticky
+    top: 0
+
+  > ul, > ul > li > ul
+    > li:not(#menu-item-formations)
+      position: relative
+
+      &::before
+        background-clip: content-box
+        background-color: $grey
+        border-radius: 100%
+        box-sizing: border-box
+        content: ''
+        height: 1em
+        left: 1.75em
+        padding: .35em
+        position: absolute
+        transition: padding 250ms ease
+        top: .95em
+        width: 1em
+
+      &:hover
+        &::before
+          padding: .15em
+
+      &.active
+        &::before
+          background-color: $dark
+          padding: 0
+
+
+    li#menu-item-home
+      a
+        font-size: 0
+
+        &::before
+          content: 'Accueil'
+          display: block
+          font-size: $font-normal
+
+
+    li#menu-item-formations
+      &::before, &::after
+        background-color: $grey
+        content: ''
+        display: block
+        height: 1px
+        margin: .5em 0 .5em 3.5rem
+        width: 2em
+
+      > a
+        font-size: .7em
+        font-weight: $bold
+        padding-bottom: 0
+
+
+  ul#anchors
+    font-size: $font-small
+    padding-bottom: 1em
+
+    li
+      a
+        align-items: top
+        display: flex
+        padding: .35rem 1rem .35rem 3.5rem
+
+        &::before
+          background-color: $grey
+          content: ''
+          height: 1px
+          margin: .75em 1em auto -1em
+          transition: padding 250ms ease
+          min-width: 2em
