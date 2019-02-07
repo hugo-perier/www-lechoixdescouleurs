@@ -3,8 +3,9 @@
   @return $c-number / $c-total * 100vw
 
 // trame
-@function trame($vertical: 1, $horizontal: 10)
+@function trame($horizontal: 10, $vertical: 1)
   $trame-item: null
+  $trame-item-size: '((100vw - '$menu-width') - 'column(1,6)') / ('$horizontal' * 2 - 1)'
 
   @for $vertical-item from 1 through $vertical
     $position-y: calc((#{$vertical-item} - 1) * #{$trame-item-size} * 2)
