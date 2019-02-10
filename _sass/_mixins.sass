@@ -1,0 +1,7 @@
+@mixin color-trame($horizontal, $vertical)
+  &::before
+    background: trame($horizontal, $vertical)
+    content: ''
+    display: block
+    height: calc(#{trame-item-size($horizontal)} * (#{$vertical} * 2 - 1))
+    width: 100%

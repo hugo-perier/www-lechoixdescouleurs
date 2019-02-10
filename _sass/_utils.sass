@@ -2,18 +2,24 @@
 @function column($c-number, $c-total)
   @return $c-number / $c-total * 100vw
 
+
+// trame-item-size
+@function trame-item-size($horizontal-total)
+  $trame-item-size: calc(#{$main-content-width} / (#{$horizontal-total} * 2 - 1))
+
+  @return $trame-item-size
+
 // trame
-@function trame($horizontal: 10, $vertical: 1, $size: 67%)
+@function trame($horizontal: 10, $vertical: 1, $size: 65%)
   $trame-item: null
-  $trame-item-size: '((100vw - '$menu-width') - 'column(1,6)') / ('$horizontal' * 2 - 1)'
 
   @for $vertical-item from 1 through $vertical
-    $position-y: calc((#{$vertical-item} - 1) * #{$trame-item-size} * 2)
+    $position-y: calc((#{$vertical-item} - 1) * #{trame-item-size($horizontal)} * 2)
 
     @for $horizontal-item from 1 through $horizontal
       $color: map-get($random-colors, random($random-colors-nth))
-      $position-x: calc((#{$horizontal-item} - 1) * #{$trame-item-size} * 2)
+      $position-x: calc((#{$horizontal-item} - 1) * #{trame-item-size($horizontal)} * 2)
 
-      $trame-item: $trame-item radial-gradient(circle at center, $color $size, transparent $size + 2%) $position-x $position-y #{'/'} calc(#{$trame-item-size}) calc(#{$trame-item-size}) content-box no-repeat#{','}
+      $trame-item: $trame-item radial-gradient(circle at center, $color $size, transparent $size + 4%) $position-x $position-y #{'/'} trame-item-size($horizontal) trame-item-size($horizontal) content-box no-repeat#{','}
 
   @return $trame-item none
