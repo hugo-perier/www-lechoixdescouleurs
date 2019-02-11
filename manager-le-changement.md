@@ -1,6 +1,6 @@
 ---
 category: Nos formations
-id: formation
+id: manager-changement
 layout: default
 order: 3
 title: Manager le changement

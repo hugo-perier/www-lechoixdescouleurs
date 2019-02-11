@@ -1,6 +1,6 @@
 ---
 category: Nos formations
-id: formation
+id: responsable-changement
 layout: default
 order: 2
 title: Responsable du changement

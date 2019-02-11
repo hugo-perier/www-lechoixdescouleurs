@@ -6,7 +6,7 @@
     {% if formationlist-item.category == 'Nos formations' %}
     {% unless formationlist-item.title == page.title %}
     <li>
-      <a href="{{ formationlist-item.url }}">{{ formationlist-item.title }}</a>
+      <a class="{{ formationlist-item.id }}" href="{{ formationlist-item.url }}">{{ formationlist-item.title }}</a>
     </li>
     {% endunless %}
     {% endif %}

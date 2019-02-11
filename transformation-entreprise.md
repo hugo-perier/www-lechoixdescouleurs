@@ -1,6 +1,6 @@
 ---
 category: Nos formations
-id: formation
+id: transformation-entreprise
 layout: default
 order: 1
 title: Construire un projet de transformation d'entreprise
