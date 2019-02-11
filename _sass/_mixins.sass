@@ -5,3 +5,12 @@
     display: block
     height: calc(#{trame-item-size($horizontal)} * (#{$vertical} * 2 - 1))
     width: 100%
+
+
+@mixin formations-list($color-number)
+  background-color: map-get($random-colors, $color-number)
+  transition: background-color 250ms, box-shadow 250ms ease
+
+  &:hover
+    background-color: darken(map-get($random-colors, $color-number), 15)
+    box-shadow: 0 0 0 4px darken(map-get($random-colors, $color-number), 15)

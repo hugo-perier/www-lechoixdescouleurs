@@ -6,7 +6,7 @@ order: 1
 title: Coaching, team building, formation & conseil
 ---
 
-Notre vocation
+**Notre vocation**
 ## Relier l'institution et le corps social
 Toute organisation, entreprise ou association, vit un équilibre dialectique entre :
 - Une Institution, centrée sur la recherche de l’efficacité collective, composée d’un agencement de fonctions, de postes et de systèmes qui structurent l’entreprise

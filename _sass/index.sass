@@ -14,8 +14,75 @@ body
     width: $menu-width
 
   header, main, footer
-    // max-width: 700px
-    padding: 2.5em column(.5,6)
+    padding: $section-vertical-padding $main-horizontal-padding
 
 a
   color: inherit
+
+h2
+  font-size: $font-extra-large
+  margin-top: 0
+
+main
+  ul
+    list-style-type: '• '
+    padding-left: 1em
+
+    li
+      margin: .75em 0
+
+  > section
+    border-top: solid 1px $grey-light
+    margin: $section-vertical-padding calc(-#{$main-horizontal-padding})
+    padding: $section-vertical-padding $main-horizontal-padding 0
+
+    p
+      &:first-of-type
+        color: $grey
+        font-weight: $bold
+        margin-top: 0
+
+    ul
+      list-style-type: none
+      padding-left: 0
+
+      li
+        a
+          color: $white
+          display: block
+          font-size: $font-large
+          font-weight: $bold
+          padding: 1em 2em
+          text-decoration: none
+
+          &::after
+            box-shadow: 0 1px 0 currentColor
+            content: 'En savoir plus ➜'
+            display: block
+            font-size: $font-normal
+            font-weight: $regular
+            margin-top: 1em
+            transition: margin 200ms
+            width: fit-content
+            width: -moz-fit-content
+
+          &:hover
+            &::after
+              margin-left: 1em
+
+          &.manager-changement
+            @include formations-list(56)
+
+          &.responsable-changement
+            @include formations-list(32)
+
+          &.transformation-entreprise
+            @include formations-list(3)
+
+          &.custom
+            border: solid 4px currentColor
+            color: map-get($random-colors, 15)
+            transition: box-shadow 250ms ease
+
+            &:hover
+              box-shadow: 0 0 0 4px currentColor
