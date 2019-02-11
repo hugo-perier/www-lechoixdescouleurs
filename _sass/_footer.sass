@@ -1,0 +1,60 @@
+footer
+  background: url('../images/logo.svg') bottom left / column(1,6) content-box no-repeat, $grey
+  color: $white
+  display: table
+
+  &::before
+    border-top: solid 1px currentColor
+    content: ''
+    display: table-cell
+    width: $main-horizontal-padding
+
+  > *
+    padding-left: 2em
+
+  h4
+    font-weight: $bold
+    margin-top: 0
+
+  ul
+    display: flex
+    justify-content: flex-end
+    list-style: none
+
+    li
+      margin-left: 1em
+
+  ul.contact-list
+    margin-top: 5em
+
+    li
+      a
+        font-size: 0
+
+        $link-list: phone mail linkedin
+
+        @each $link in $link-list
+          &.#{$link}::before
+            content: url('../images/contact/#{$link}-icon.svg')
+
+        &::before
+          align-items: center
+          background-color: $dark
+          border: solid 1px $dark
+          border-radius: 100%
+          display: flex
+          height: $font-extra-large
+          justify-content: center
+          transition: border 200ms
+          width: $font-extra-large
+
+        &:hover
+          &::before
+            border: solid 1px currentColor
+
+
+  ul.legal-list
+    font-size: $font-small
+
+    a
+      text-decoration: none
