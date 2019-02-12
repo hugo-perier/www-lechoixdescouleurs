@@ -18,9 +18,46 @@
   main
     padding-top: 0
 
+
+
   h3
     border-top: solid 1px $grey-light
     font-size: $font-extra-large
     font-weight: $regular
     margin: $section-vertical-padding calc(-#{$main-horizontal-padding}) 0
     padding: $section-vertical-padding $main-horizontal-padding 0
+    transform-style: preserve-3d
+
+    &::before, &::after
+      border-radius: 100%
+      content: ''
+      display: block
+      height: 3em
+      position: absolute
+      width: 3em
+
+    &:nth-of-type(1)
+      &::before
+        @include parallax(-1)
+        background-color: map-get($random-colors, random($random-colors-nth))
+        right: -35vw
+        top: 200px
+
+      &::after
+        @include parallax(.2)
+        background-color: map-get($random-colors, random($random-colors-nth))
+        left: 5vw
+        top: 400px
+
+    &:nth-of-type(2)
+      &::before
+        @include parallax(-.4)
+        background-color: map-get($random-colors, random($random-colors-nth))
+        left: 0
+        top: 200px
+
+      &::after
+        @include parallax(.4)
+        background-color: map-get($random-colors, random($random-colors-nth))
+        right: 20vw
+        top: 500px
