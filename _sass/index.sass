@@ -1,6 +1,5 @@
 body
   box-sizing: border-box
-  // display: table
   margin: 0
   font-family: 'Raleway', Helvetica, Arial, sans-serif
   font-size: $font-normal
@@ -10,34 +9,59 @@ body
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
 
-  > nav
-    display: none
-    // display: table-cell
+  nav
+    background-color: $white
+    height: 100vh
+    position: sticky
+    top: 0
     vertical-align: top
     width: $menu-width
+    z-index: 9
 
   header, main, footer
     padding: $section-vertical-padding $main-horizontal-padding
 
-a
-  color: inherit
+  a
+    color: inherit
 
-h1, h2, h3, h4, h5, h6
-  line-height: 1.1
+  h1, h2, h3, h4, h5, h6
+    line-height: 1.1
 
-h1
-  font-size: $font-normal
-  margin-bottom: 0
+  h1
+    font-size: $font-normal
+    margin-bottom: 0
 
-h2
-  font-size: $font-extra-large
-  margin-top: 0
+  h2
+    font-size: $font-extra-large
+    margin-top: 0
+
+  main
+    ul
+      list-style-type: '• '
+      padding-left: 1em
+
+      li
+        margin: .75em 0
 
 
-main
-  ul
-    list-style-type: '• '
-    padding-left: 1em
+@supports (display: grid)
+  body
+    display: grid
+    grid-template-rows: 1fr 1fr 1fr
+    grid-template-columns: $menu-width auto
 
-    li
-      margin: .75em 0
+    nav
+      grid-column: 1
+      grid-row: 1 / 4
+
+    header, main, footer
+      grid-column: 2
+
+    header
+      grid-row: 1
+
+    main
+      grid-row: 2
+
+    footer
+      grid-row: 3
