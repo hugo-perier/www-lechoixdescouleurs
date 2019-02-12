@@ -1,0 +1,26 @@
+#manager-changement, #responsable-changement, #transformation-entreprise
+  header
+    @include color-trame(10, 2)
+    padding-bottom: 0
+
+    @media screen and (max-width: 1300px)
+      @include color-trame(9, 2)
+
+    @media screen and (max-width: 1050px)
+      @include color-trame(7, 2)
+
+    @media screen and (max-width: 800px)
+      @include color-trame(5, 2)
+
+    h1
+      margin-top: 2.5em
+
+  main
+    padding-top: 0
+
+  h3
+    border-top: solid 1px $grey-light
+    font-size: $font-extra-large
+    font-weight: $regular
+    margin: $section-vertical-padding calc(-#{$main-horizontal-padding}) 0
+    padding: $section-vertical-padding $main-horizontal-padding 0
