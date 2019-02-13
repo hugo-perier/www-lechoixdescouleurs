@@ -27,38 +27,39 @@
     font-weight: $regular
     margin: $section-vertical-padding calc(-#{$main-horizontal-padding}) 0
     padding: $section-vertical-padding $main-horizontal-padding 0
-    transform-style: preserve-3d
 
-    &::before, &::after
-      border-radius: 100%
-      content: ''
-      display: block
-      height: 3em
-      position: absolute
-      width: 3em
 
-    &:nth-of-type(1)
-      &::before
-        @include parallax(-.1)
-        background-color: map-get($random-colors, random($random-colors-nth))
-        right: 0
-        top: 200px
+$formation-list: manager-changement responsable-changement transformation-entreprise
 
-      &::after
-        @include parallax(.4)
-        background-color: map-get($random-colors, random($random-colors-nth))
-        left: 5vw
-        top: 400px
+@each $formation in $formation-list
+  ##{$formation}
+    h3
+      &:nth-of-type(1), &:nth-of-type(2)
+        transform-style: preserve-3d
 
-    &:nth-of-type(2)
-      &::before
-        @include parallax(-.2)
-        background-color: map-get($random-colors, random($random-colors-nth))
-        left: 0
-        top: 200px
+        &::before, &::after
+          border-radius: 100%
+          content: ''
+          display: block
+          height: 3em
+          position: absolute
+          width: 3em
+          z-index: -1
 
-      &::after
-        @include parallax(.4)
-        background-color: map-get($random-colors, random($random-colors-nth))
-        right: 20vw
-        top: 500px
+      &:nth-of-type(1)
+        &::before
+          @include parallax(-.1)
+          right: 0
+
+        &::after
+          @include parallax(.4)
+          left: 5vw
+
+      &:nth-of-type(2)
+        &::before
+          @include parallax(-.2)
+          left: 0
+
+        &::after
+          @include parallax(.4)
+          right: 20vw

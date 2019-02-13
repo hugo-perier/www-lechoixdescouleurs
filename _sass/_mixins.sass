@@ -1,3 +1,4 @@
+// Color trame
 @mixin color-trame($horizontal, $vertical)
   &::before
     background: trame($horizontal, $vertical)
@@ -7,6 +8,7 @@
     width: 100%
 
 
+// Formation list
 @mixin formations-list($color-number)
   background-color: map-get($random-colors, $color-number)
   transition: background-color 250ms, box-shadow 250ms ease
@@ -16,13 +18,7 @@
     box-shadow: 0 0 0 4px darken(map-get($random-colors, $color-number), 15)
 
 
-
-
-
-
-
-
-// Magic parallax mixins
+// Parallax mixins
 $parallax-perspective : 1 !default
 $parallax-element : "body" !default
 $parallax-ios : true !default
@@ -48,10 +44,7 @@ $parallax-ios : true !default
     &, *
       transform-style: preserve-3d
 
-
 @mixin parallax( $distance: 0, $perspective: $parallax-perspective)
+  background-color: map-get($random-colors, random($random-colors-nth))
+  top: random(500) + 100px
   transform: translateZ($distance * $perspective * 1px) scale(abs($distance - 1))
-  z-index: -1
-
-
-@include parallax-init
