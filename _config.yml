@@ -3,3 +3,10 @@ title: Le choix des couleurs
 email: contact@lechoixdescouleurs.fr
 description: Coaching, team building, formation & conseil
 url: "http://lechoixdescouleurs.fr"
+
+plugins:
+- jekyll-autoprefixer
+
+autoprefixer:
+  browsers:
+  - last 2 versions
