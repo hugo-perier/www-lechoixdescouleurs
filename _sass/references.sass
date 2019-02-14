@@ -9,14 +9,8 @@
     padding-top: 0
 
     > ul
-      display: grid
-      grid-gap: 1em
-      list-style-type: none
-      padding-left: 0
-
       &:first-of-type
-        grid-template-columns: repeat(auto-fill, minmax(10em, 1fr))
-        margin-top: 2em
+        @include grid-list(10em)
 
         li
           align-items: center
@@ -26,16 +20,5 @@
             max-width: 100%
 
       &:last-of-type
-        grid-template-columns: repeat(auto-fill, minmax(14em, 1fr))
-
-        li
-          border: solid 4px currentColor
-          color: map-get($random-colors, 15)
-          transition: box-shadow 250ms ease
-
-          &:hover
-            box-shadow: 0 0 0 4px currentColor
-
-          a
-            display: block
-            padding: 1em 2em
+        @include grid-list(14em)
+        @include link-list

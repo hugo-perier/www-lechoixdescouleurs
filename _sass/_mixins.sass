@@ -48,3 +48,31 @@ $parallax-ios : true !default
   background-color: map-get($random-colors, random($random-colors-nth))
   top: random(500) + 100px
   transform: translateZ($distance * $perspective * 1px) scale(abs($distance - 1))
+
+
+// Grid list
+@mixin grid-list($min)
+  display: grid
+  grid-gap: 1em
+  grid-template-columns: repeat(auto-fill, minmax($min, 1fr))
+  list-style-type: none
+  margin-top: 2em
+  padding-left: 0
+
+  li
+    margin: 0
+
+
+// Link list
+@mixin link-list
+  li
+    border: solid 4px currentColor
+    color: map-get($random-colors, 15)
+    transition: box-shadow 250ms ease
+
+    &:hover
+      box-shadow: 0 0 0 4px currentColor
+
+    a
+      display: block
+      padding: 1em 2em

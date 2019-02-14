@@ -1,0 +1,21 @@
+#contact
+  header
+    @include color-trame(10, 5)
+    padding-bottom: 0
+
+    @media screen and (max-width: 1300px)
+      @include color-trame(9, 5)
+
+    @media screen and (max-width: 1050px)
+      @include color-trame(7, 6)
+
+    @media screen and (max-width: 800px)
+      @include color-trame(5, 5)
+
+  h1, h2
+    display: none
+
+  main
+    > ul
+      @include grid-list(14em)
+      @include link-list
