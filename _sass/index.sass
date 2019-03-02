@@ -1,15 +1,20 @@
 body
   box-sizing: border-box
+  display: grid
+  // grid-template-rows: 1fr 1fr 1fr
+  grid-template-columns: $menu-width auto
   margin: 0
   font-family: 'Raleway', Helvetica, Arial, sans-serif
   font-size: $font-normal
   font-weight: $regular
   line-height: 1.7
 
-@include parallax-init
+// @include parallax-init
 
 nav
   background-color: $white
+  grid-column: 1
+  grid-row: 1 / 4
   height: 100vh
   position: sticky
   top: 0
@@ -18,6 +23,7 @@ nav
   z-index: 9
 
 header, main, footer
+  grid-column: 2
   padding: $section-vertical-padding $main-horizontal-padding
 
 a
@@ -49,26 +55,3 @@ main
 
     li
       margin: .75em 0
-
-
-@supports (display: grid)
-  body
-    display: grid
-    grid-template-rows: 1fr 1fr 1fr
-    grid-template-columns: $menu-width auto
-
-    nav
-      grid-column: 1
-      grid-row: 1 / 4
-
-    header, main, footer
-      grid-column: 2
-
-    header
-      grid-row: 1
-
-    main
-      grid-row: 2
-
-    footer
-      grid-row: 3

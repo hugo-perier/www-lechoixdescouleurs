@@ -3,23 +3,28 @@
   @return $c-number / $c-total * 100vw
 
 
+// Pick a color
+@function color($number: random($random-colors-nth))
+  @return map-get($random-colors, $number)
+
+
 // trame-item-size
 @function trame-item-size($horizontal-total)
   $trame-item-size: calc(#{$main-content-width} / (#{$horizontal-total} * 2 - 1))
 
   @return $trame-item-size
 
+
 // trame
-@function trame($horizontal: 10, $vertical: 1, $size: 65%)
+@function trame($horizontal: 10, $vertical: 1, $bg-origin: content-box, $size: 65%)
   $trame-item: null
 
   @for $vertical-item from 1 through $vertical
     $position-y: calc((#{$vertical-item} - 1) * #{trame-item-size($horizontal)} * 2)
 
     @for $horizontal-item from 1 through $horizontal
-      $color: map-get($random-colors, random($random-colors-nth))
       $position-x: calc((#{$horizontal-item} - 1) * #{trame-item-size($horizontal)} * 2)
 
-      $trame-item: $trame-item radial-gradient(circle at center, $color $size, transparent $size + 4%) $position-x $position-y #{'/'} trame-item-size($horizontal) trame-item-size($horizontal) content-box no-repeat#{','}
+      $trame-item: $trame-item radial-gradient(circle at center, color() $size, transparent $size + $horizontal / 3) $position-x $position-y #{'/'} trame-item-size($horizontal) trame-item-size($horizontal) $bg-origin no-repeat#{','}
 
   @return $trame-item none
