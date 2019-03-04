@@ -1,7 +1,11 @@
 // Color trame
 @mixin color-trame($horizontal, $vertical)
   &::before
-    background: trame($horizontal, $vertical)
+    background-image: trame-images($horizontal, $vertical) none
+    background-origin: content-box
+    background-position: trame-positions($horizontal, $vertical) 0 0
+    background-repeat: no-repeat
+    background-size: trame-sizes($horizontal, $vertical) 0 0
     content: ''
     display: block
     height: calc(#{trame-item-size($horizontal)} * (#{$vertical} * 2 - 1))

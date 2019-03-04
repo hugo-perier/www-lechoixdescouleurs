@@ -8,16 +8,27 @@
   @return map-get($random-colors, $number)
 
 
-// trame-item-size
+
+// trame
 @function trame-item-size($horizontal-total)
   $trame-item-size: calc(#{$main-content-width} / (#{$horizontal-total} * 2 - 1))
 
   @return $trame-item-size
 
 
-// trame
-@function trame($horizontal: 10, $vertical: 1, $bg-origin: content-box, $size: 65%)
-  $trame-item: null
+@function trame-images($horizontal, $vertical)
+  $trame-item-image: null
+
+  @for $vertical-item from 1 through $vertical
+
+    @for $horizontal-item from 1 through $horizontal
+      $trame-item-image: $trame-item-image radial-gradient(color() 65%, transparent 65% + $horizontal / 3)#{','}
+
+  @return $trame-item-image
+
+
+@function trame-positions($horizontal, $vertical)
+  $trame-item-position: null
 
   @for $vertical-item from 1 through $vertical
     $position-y: calc((#{$vertical-item} - 1) * #{trame-item-size($horizontal)} * 2)
@@ -25,6 +36,17 @@
     @for $horizontal-item from 1 through $horizontal
       $position-x: calc((#{$horizontal-item} - 1) * #{trame-item-size($horizontal)} * 2)
 
-      $trame-item: $trame-item radial-gradient(circle at center, color() $size, transparent $size + $horizontal / 3) $position-x $position-y #{'/'} trame-item-size($horizontal) trame-item-size($horizontal) $bg-origin no-repeat#{','}
+      $trame-item-position: $trame-item-position $position-x $position-y#{','}
 
-  @return $trame-item none
+  @return $trame-item-position
+
+
+@function trame-sizes($horizontal, $vertical)
+  $trame-item-width: null
+
+  @for $vertical-item from 1 through $vertical
+
+    @for $horizontal-item from 1 through $horizontal
+      $trame-item-width: $trame-item-width trame-item-size($horizontal) trame-item-size($horizontal)#{','}
+
+  @return $trame-item-width
