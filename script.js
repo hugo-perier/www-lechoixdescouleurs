@@ -1,3 +1,5 @@
+//# sourceMappingURL=http://code.jquery.com/jquery-3.3.1.min.js
+
 $(document).ready(function() {
   // Submenu
   $('#submenu li.active').append('<ul id="anchors"></ul>');
