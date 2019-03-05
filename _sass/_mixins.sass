@@ -1,11 +1,21 @@
 // Color trame
 @mixin color-trame($horizontal, $vertical)
+  // @keyframes trame-animation-#{$horizontal}-#{$vertical}
+    0%
+      background-position: trame-positions-animation($horizontal, $vertical) 0 0
+      background-size: 0 0
+
+    // 100%
+      background-position: trame-positions($horizontal, $vertical) 0 0
+      background-size: trame-sizes($horizontal, $vertical) 0 0
+
   &::before
+    // animation: trame-animation-#{$horizontal}-#{$vertical} 500ms cubic-bezier(.62, 1.93, .63, .6) 2s both
     background-image: trame-images($horizontal, $vertical) none
     background-origin: content-box
     background-position: trame-positions($horizontal, $vertical) 0 0
     background-repeat: no-repeat
-    background-size: trame-sizes($horizontal, $vertical) 0 0
+    background-size: trame-sizes($horizontal, $vertical)
     content: ''
     display: block
     height: calc(#{trame-item-size($horizontal)} * (#{$vertical} * 2 - 1))

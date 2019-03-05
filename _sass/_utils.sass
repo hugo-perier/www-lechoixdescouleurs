@@ -3,17 +3,19 @@
   @return $c-number / $c-total * 100vw
 
 
+
 // Pick a color
 @function color($number: random($random-colors-nth))
   @return map-get($random-colors, $number)
 
 
+
 // trame
 @function trame-item-size($horizontal-total)
   $trame-item-total: $horizontal-total * 2 - 1
-  $main-padding: $main-horizontal-padding * 2
+  $content-width: 100vw - $main-horizontal-padding * 2
 
-  $trame-item-size: calc((100vw - #{$menu-width} - #{$main-padding}) / #{$trame-item-total})
+  $trame-item-size: calc((#{$content-width} - #{$menu-width}) / #{$trame-item-total})
 
   @return $trame-item-size
 
@@ -32,23 +34,35 @@
 @function trame-positions($horizontal, $vertical)
   $trame-item-position: null
 
-  @for $vertical-item from 1 through $vertical
-    $position-y: calc((#{$vertical-item} - 1) * #{trame-item-size($horizontal)} * 2)
+  @for $horizontal-item from 1 through $horizontal
+    $position-left: $horizontal-item - 1
+    $position-x: calc(#{$position-left} * #{trame-item-size($horizontal)} * 2)
 
-    @for $horizontal-item from 1 through $horizontal
-      $position-x: calc((#{$horizontal-item} - 1) * #{trame-item-size($horizontal)} * 2)
+    @for $vertical-item from 1 through $vertical
+      $position-top: $vertical-item - 1
+      $position-y: calc(#{$position-top} * #{trame-item-size($horizontal)} * 2)
 
       $trame-item-position: $trame-item-position $position-x $position-y#{','}
 
   @return $trame-item-position
 
 
-@function trame-sizes($horizontal, $vertical)
-  $trame-item-width: null
+// @function trame-positions-animation($horizontal, $vertical)
+  $trame-item-position-animation: null
 
   @for $vertical-item from 1 through $vertical
+    $position-y: calc((#{$vertical-item} - 1) * #{trame-item-size($horizontal)} * 2 + #{trame-item-size($horizontal)} / 2)
 
     @for $horizontal-item from 1 through $horizontal
-      $trame-item-width: $trame-item-width trame-item-size($horizontal) trame-item-size($horizontal)#{','}
+      $position-x: calc((#{$horizontal-item} - 1) * #{trame-item-size($horizontal)} * 2 + #{trame-item-size($horizontal)} / 2)
+
+      $trame-item-position-animation: $trame-item-position-animation $position-x $position-y#{','}
+
+  @return $trame-item-position-animation
+
+
+@function trame-sizes($horizontal, $vertical)
+  $trame-item-width: null
+  $trame-item-width: $trame-item-width trame-item-size($horizontal) trame-item-size($horizontal)
 
   @return $trame-item-width
