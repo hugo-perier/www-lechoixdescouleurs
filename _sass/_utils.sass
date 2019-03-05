@@ -8,11 +8,12 @@
   @return map-get($random-colors, $number)
 
 
-
 // trame
 @function trame-item-size($horizontal-total)
   $trame-item-total: $horizontal-total * 2 - 1
-  $trame-item-size: calc(#{$main-content-width} / #{$trame-item-total})
+  $main-padding: $main-horizontal-padding * 2
+
+  $trame-item-size: calc((100vw - #{$menu-width} - #{$main-padding}) / #{$trame-item-total})
 
   @return $trame-item-size
 
