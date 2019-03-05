@@ -11,7 +11,8 @@
 
 // trame
 @function trame-item-size($horizontal-total)
-  $trame-item-size: calc(#{$main-content-width} / (#{$horizontal-total} * 2 - 1))
+  $trame-item-total: $horizontal-total * 2 - 1
+  $trame-item-size: calc(#{$main-content-width} / #{$trame-item-total})
 
   @return $trame-item-size
 
