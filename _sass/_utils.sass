@@ -47,22 +47,25 @@
   @return $trame-item-position
 
 
-// @function trame-positions-animation($horizontal, $vertical)
-  $trame-item-position-animation: null
-
-  @for $vertical-item from 1 through $vertical
-    $position-y: calc((#{$vertical-item} - 1) * #{trame-item-size($horizontal)} * 2 + #{trame-item-size($horizontal)} / 2)
-
-    @for $horizontal-item from 1 through $horizontal
-      $position-x: calc((#{$horizontal-item} - 1) * #{trame-item-size($horizontal)} * 2 + #{trame-item-size($horizontal)} / 2)
-
-      $trame-item-position-animation: $trame-item-position-animation $position-x $position-y#{','}
-
-  @return $trame-item-position-animation
-
-
-@function trame-sizes($horizontal, $vertical)
+@function trame-sizes($horizontal)
   $trame-item-width: null
   $trame-item-width: $trame-item-width trame-item-size($horizontal) trame-item-size($horizontal)
 
   @return $trame-item-width
+
+
+@function trame-sizes-animation($item, $horizontal, $total)
+  $trame-sizes-animation: null
+
+  @for $i from 1 through $total
+    @if $i > $item
+      $trame-sizes-animation: $trame-sizes-animation 0 0#{','}
+
+    @if $i <= $item - $total + 1
+      $trame-sizes-animation: $trame-sizes-animation trame-sizes($horizontal)#{','}
+
+    @if $i <= $item and not ($i <= $item - $total + 1)
+      $steps: (1 / $total * ($item - $i + 1))
+      $trame-sizes-animation: $trame-sizes-animation calc(#{trame-item-size($horizontal)} * #{$steps}) calc(#{trame-item-size($horizontal)} * #{$steps})#{','}
+
+  @return $trame-sizes-animation
