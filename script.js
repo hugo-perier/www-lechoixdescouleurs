@@ -24,7 +24,7 @@ $(document).ready(function() {
   var positionOnLoad3 = 600 + 'px';
   var positionOnLoad4 = getRandomInt(pageHeight) + 'px';
 
-  $('main').css('background-position-y', positionOnLoad1 + ', ' + positionOnLoad2 + ', ' + positionOnLoad3 + ', ' + positionOnLoad4);
+  $('#manager-changement main, #responsable-changement main, #transformation-entreprise main').css('background-position-y', positionOnLoad1 + ', ' + positionOnLoad2 + ', ' + positionOnLoad3 + ', ' + positionOnLoad4);
 
   $(document).scroll(function() {
     var positionScroll = $(window).scrollTop();
@@ -33,6 +33,6 @@ $(document).ready(function() {
     var positionScroll3 = parseInt(positionOnLoad3) + parseInt(positionScroll) * .5 + 'px';
     var positionScroll4 = parseInt(positionOnLoad4) + parseInt(positionScroll) * -.4 + 'px';
 
-    $('main').css('background-position-y', positionScroll1 + ', ' + positionScroll2 + ', ' + positionScroll3 + ', ' + positionScroll4);
+    $('#manager-changement main, #responsable-changement main, #transformation-entreprise main').css('background-position-y', positionScroll1 + ', ' + positionScroll2 + ', ' + positionScroll3 + ', ' + positionScroll4);
   });
 });
