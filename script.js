@@ -8,9 +8,11 @@ $(document).ready(function() {
     $('#anchors').append('<li><a href=#>' + $(this).text() + '</a></li>');
   });
 
-
   // Scrolldown
   $('#home header').append('<span id="scroll-down">découvrir</span>');
+
+  // Menu mobile
+  $('nav > ul').append('<span></span><span></span><span></span>');
 
 
   // Parallax

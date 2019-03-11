@@ -89,3 +89,72 @@ nav
           margin: .75em 1em auto -1em
           transition: padding 250ms ease
           min-width: 2em
+
+
+@media screen and (min-width: $mobile-menu-mq + 1px)
+  nav
+    > ul
+      span
+        display: none
+
+
+@media screen and (max-width: $mobile-menu-mq)
+  nav
+    box-shadow: 0 0 100vw 100vw rgba(0, 0, 0, 0)
+
+    > ul
+      padding-left: 5vw
+
+      &::before
+        background: $dark
+        border: solid 1px
+        border-radius: 100%
+        box-shadow: 0 0 2px 0 $dark
+        content: ''
+        height: 4em
+        position: absolute
+        right: -2em
+        transition: box-shadow 250ms ease
+        width: 4em
+        z-index: 2
+
+      li
+        opacity: 0
+        transition: opacity 250ms ease-in
+
+        @for $i from 1 through 9
+          &:nth-of-type(#{$i})
+            transition-delay: $i * 75ms + 500ms
+
+      span
+        background-color: $white
+        height: 2px
+        left: 100%
+        position: absolute
+        top: 1.5em + 2em
+        transition: left 250ms 750ms, width 250ms 750ms
+        width: 1.25em
+        z-index: 2
+
+        &:nth-of-type(2)
+          top: 2em + 2em
+          width: 1em
+
+        &:nth-of-type(3)
+          top: 2.5em + 2em
+          width: .5em
+
+    // open state
+    &:hover
+      box-shadow: 0 0 100vw 100vw rgba(0, 0, 0, .15)
+
+      > ul
+        &::before
+          box-shadow: 0 0 2px 4px $dark
+
+        li
+          opacity: 1
+
+        span
+          left: calc(100% - .75em)
+          width: 1.5em

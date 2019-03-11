@@ -1,26 +1,43 @@
 body
   box-sizing: border-box
-  display: grid
-  grid-template-columns: $menu-width auto
   margin: 0
   font-family: 'Raleway', Helvetica, Arial, sans-serif
   font-size: $font-normal
   font-weight: $regular
   line-height: 1.7
 
+  @media screen and (min-width: $mobile-menu-mq + 1px)
+    display: grid
+    grid-template-columns: $menu-width auto
+
+    nav
+      grid-column: 1
+      grid-row: 1 / 4
+      position: sticky
+      vertical-align: top
+
+    header, main, footer
+      grid-column: 2
+
+
 nav
   background-color: $white
-  grid-column: 1
-  grid-row: 1 / 4
   height: 100vh
-  position: sticky
   top: 0
-  vertical-align: top
   width: $menu-width
   z-index: 9
 
+  @media screen and (max-width: $mobile-menu-mq)
+    left: -80vw
+    position: fixed
+    transition: left 300ms ease-in 150ms, box-shadow 300ms ease-in 150ms
+    width: 80vw
+
+    &:hover
+      left: 0
+
+
 header, main, footer
-  grid-column: 2
   padding: $section-vertical-padding $main-horizontal-padding
 
 a
