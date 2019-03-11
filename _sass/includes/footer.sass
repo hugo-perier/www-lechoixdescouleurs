@@ -1,7 +1,11 @@
 footer
-  background: url('../images/logo.svg') bottom left / column(1,6) content-box no-repeat, $grey
+  background: $grey
   color: $white
   display: table
+
+  @media screen and (min-width: 700px)
+    background: url('../images/logo.svg') bottom left / column(1,6) content-box no-repeat, $grey
+
 
   &::before
     border-top: solid 1px currentColor
