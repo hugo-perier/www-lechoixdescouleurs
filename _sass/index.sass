@@ -1,7 +1,6 @@
 body
   box-sizing: border-box
   display: grid
-  // grid-template-rows: 1fr 1fr 1fr
   grid-template-columns: $menu-width auto
   margin: 0
   font-family: 'Raleway', Helvetica, Arial, sans-serif
@@ -53,3 +52,12 @@ main
 
     li
       margin: .75em 0
+
+
+#home, #contact
+  header
+    @include color-trame(10, 5)
+    padding-bottom: 0
+
+    @media screen and (max-width: 950px)
+      @include color-trame(5, 5)
