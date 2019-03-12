@@ -1,5 +1,3 @@
-//# sourceMappingURL=http://code.jquery.com/jquery-3.3.1.min.js
-
 $(document).ready(function() {
   // Submenu
   $('#submenu li.active').append('<ul id="anchors"></ul>');
@@ -9,7 +7,11 @@ $(document).ready(function() {
   });
 
   // Scrolldown
-  $('#home header').append('<span id="scroll-down">découvrir</span>');
+  $('#home header').append('<button id="scroll-down" type="button">découvrir</button>');
+
+  $('#scroll-down').on('click',function(){
+    $('html, body').animate({scrollTop: $("main").offset().top}, 500);
+  });
 
   // Menu mobile
   $('nav').prepend('<div id="menu_btn"><span></span><span></span><span></span></div>');

@@ -14,12 +14,25 @@
       max-width: 15em
 
     #scroll-down
+      align-self: flex-start
+      align-items: center
+      background: none
+      border: none
       color: $grey
+      display: flex
+      cursor: pointer
+      font: inherit
       font-size: $font-normal
-      margin-top: 2.5em
+      outline: inherit
+      padding: 0
+      margin: 2.5em 0
 
       &::before
         content: '↓'
-        display: inline-block
+        font-size: .9em
         margin-right: .5em
-        vertical-align: text-bottom
+        transition: margin-right 200ms
+
+      &:hover
+        &::before
+          margin-right: 1em
