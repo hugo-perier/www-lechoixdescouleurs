@@ -39,4 +39,38 @@ $(document).ready(function() {
 
     $('#manager-changement main, #responsable-changement main, #transformation-entreprise main').css('background-position-y', positionScroll1 + ', ' + positionScroll2 + ', ' + positionScroll3 + ', ' + positionScroll4);
   });
+
+
+  // Ancres
+  var windowHeight = $(window).height();
+
+  var sectionNth = [];
+  var sectionList = [];
+  $('main h3').each(function( index ){
+      var nth = index + 1,
+          position = $('h3:nth-of-type('+nth+')').offset().top,
+          section = position - windowHeight / 2;
+
+      sectionNth.push(nth);
+      sectionList.push(section);
+  });
+
+  $(document).scroll(function() {
+    sectionNth.forEach(function(element) {
+      if (($(window).scrollTop() > sectionList[element - 1]) && ($(window).scrollTop() < sectionList[element])){
+        $('nav li.active #anchors li').removeClass("current");
+        $('nav li.active #anchors li:nth-of-type('+element+')').addClass("current");
+      }
+    });
+
+    var last_section = sectionNth[sectionNth.length - 1],
+        preFooter_position = $('main > section').offset().top,
+        preFooter_section = preFooter_position - windowHeight / 2;
+
+    if (($(window).scrollTop() > sectionList[last_section - 1]) && ($(window).scrollTop() < preFooter_section)){
+      $('nav li.active #anchors li').removeClass("current");
+      $('nav li.active #anchors li:nth-of-type('+last_section+')').addClass("current");
+    }
+  });
+
 });
