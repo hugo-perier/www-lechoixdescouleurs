@@ -12,7 +12,7 @@ $(document).ready(function() {
   $('#home header').append('<span id="scroll-down">découvrir</span>');
 
   // Menu mobile
-  $('nav > ul').append('<span></span><span></span><span></span>');
+  $('nav').prepend('<div id="menu_btn"><span></span><span></span><span></span></div>');
 
 
   // Parallax

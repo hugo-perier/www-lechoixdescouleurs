@@ -13,28 +13,10 @@ body
     nav
       grid-column: 1
       grid-row: 1 / 4
-      position: sticky
       vertical-align: top
 
     header, main, footer
       grid-column: 2
-
-
-nav
-  background-color: $white
-  height: 100vh
-  top: 0
-  width: $menu-width
-  z-index: 9
-
-  @media screen and (max-width: $mobile-menu-mq)
-    left: -80vw
-    position: fixed
-    transition: left 300ms ease-in 150ms, box-shadow 300ms ease-in 150ms
-    width: 80vw
-
-    &:hover
-      left: 0
 
 
 header, main, footer
