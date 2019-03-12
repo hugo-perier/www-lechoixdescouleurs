@@ -9,14 +9,14 @@
   </head>
   <body id="{{ page.id }}">
     {% include nav.html %}
-    <header>
+    <header onclick="/* iOS hack */">
       <h1>
         {{ site.title }}
         {% if page.category %} - {{ page.category }}{% endif %}
       </h1>
       <h2>{{ page.title }}</h2>
     </header>
-    <main>
+    <main onclick="/* iOS hack */">
       {{ content }}
       {% include pre-footer.html %}
     </main>
