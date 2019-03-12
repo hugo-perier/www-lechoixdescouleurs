@@ -29,8 +29,9 @@ $formations-list: transformation-entreprise responsable-changement manager-chang
     header
       @include color-trame(10, 3)
 
-      @media screen and (max-width: 950px)
-        @include color-trame(6, 3)
+      @media screen and (max-width: $mobile-menu-mq)
+        @include color-trame(5, 2, mobile)
+
 
 #transformation-entreprise
   main
