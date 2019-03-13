@@ -55,6 +55,12 @@ $(document).ready(function() {
       sectionList.push(section);
   });
 
+  sectionNth.forEach(function(element) {
+    $('nav li.active #anchors li:nth-of-type('+element+')').on('click',function(){
+      $('html, body').animate({scrollTop: $('main h3:nth-of-type('+element+')').offset().top}, 750);
+    });
+  });
+
   $(document).scroll(function() {
     sectionNth.forEach(function(element) {
       if (($(window).scrollTop() > sectionList[element - 1]) && ($(window).scrollTop() < sectionList[element])){
