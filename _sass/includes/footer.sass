@@ -46,19 +46,25 @@ footer
           background-color: $dark
           border: solid 1px $dark
           border-radius: 100%
+          box-shadow: 0 0 0 0 $dark
           display: flex
           height: $font-extra-large
           justify-content: center
-          transition: border 200ms
+          transition: box-shadow 200ms
           width: $font-extra-large
 
         &:hover
           &::before
-            border: solid 1px currentColor
+            box-shadow: 0 0 0 4px $dark
 
 
   ul.legal-list
     font-size: $font-small
 
-    a
-      text-decoration: none
+    li
+      & + li
+        border-left: solid 1px
+        padding-left: 1em
+
+      a
+        text-decoration: none
