@@ -7,6 +7,4 @@ title: Contact
 ---
 
 Nous vous accompagnerons dans votre nouvelle aventure, mais d'abord, contactez-nous :
-- [www.linkedin.com](http://lechoixdescouleurs.fr)
-- [06 88 65 19 58](tel:0688651958)
-- [hugo.nathan.perier@gmail.com](mailto:hugo.nathan.perier@gmail.com)
+{% include contact.html %}
