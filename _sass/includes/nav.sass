@@ -86,17 +86,27 @@ nav
 
     li
       a
-        align-items: top
+        color: lighten($grey, 50)
         display: flex
-        padding: .35rem 1rem .35rem 3.5rem
+        padding: .35rem 2rem .35rem 3.5rem
+        transition: color 250ms ease, padding 250ms ease
 
         &::before
-          background-color: $grey
+          background-color: currentColor
           content: ''
           height: 1px
-          margin: .75em 1em auto -1em
-          transition: padding 250ms ease
-          min-width: 2em
+          margin: .75em 1em auto -1rem
+          transition: min-width 250ms ease
+          min-width: 1rem
+
+      &.current, &:hover
+        a
+          color: $dark
+          padding-right: 1rem
+
+          &::before
+            min-width: 2rem
+
 
 
 @media screen and (min-width: $mobile-menu-mq + 1px)
