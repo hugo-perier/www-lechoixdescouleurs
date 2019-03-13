@@ -16,5 +16,7 @@ title: Nos références
 - ![Bayer](/images/references/isere.jpg)
 - ![Bayer](/images/references/isere.jpg)
 
+[//]: # (Garder le titre Annual assessments au dessus du vrai titre pour le lien du footer)
+### Annual assessments
 ### Nos évaluations annuelles
 - [Évaluation de l'année 2015](/images/evaluation-2015.pdf)
