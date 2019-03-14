@@ -1,23 +1,22 @@
 // Color trame
-@mixin color-trame($horizontal, $vertical, $screen-size: desktop)
+@mixin color-trame($horizontal, $vertical)
   $total-trame: $horizontal * $vertical
   $total-keyframes: $horizontal * $vertical * 2 - 1
 
   @keyframes trame-animation-#{$total-trame}
     @for $item from 0 through $total-keyframes
       #{round(percentage($item / $total-keyframes))}
-        background-size: trame-sizes-animation($item, $horizontal, $total-trame, $screen-size) 0 0
+        background-size: trame-sizes-animation($item, $horizontal, $vertical, $total-trame) 0 0
 
   &::before
-    animation: trame-animation-#{$total-trame} 750ms cubic-bezier(.62,1.93,.63,.65) both 500ms
+    animation: trame-animation-#{$total-trame} 1000ms cubic-bezier(.62,1.93,.63,.65) both 500ms
     background-image: trame-images($horizontal, $vertical) none
-    background-origin: content-box
-    background-position: trame-positions($horizontal, $vertical, $screen-size) 0 0
+    background-position: trame-positions($horizontal, $vertical) 0 0
     background-repeat: no-repeat
-    background-size: 0 0
+    background-size: trame-item-width($horizontal) trame-item-width($vertical)
     content: ''
     display: block
-    height: calc(#{trame-item-size($horizontal, $screen-size)} * (#{$vertical} * 2 - 1))
+    padding-top: 100% / (($horizontal * 2 - 1) / ($vertical * 2 - 1))
     width: 100%
 
 

@@ -11,18 +11,16 @@
 
 
 // trame
-@function trame-item-size($horizontal-total, $screen-size: desktop)
-  $trame-item-size: null
-  $trame-item-total: $horizontal-total * 2 - 1
-  $content-width: 100vw - $main-horizontal-padding * 2
+@function trame-item-width($horizontal)
+  $trame-item-width: (1 / ($horizontal * 2 - 1)) * 100%
 
-  @if $screen-size == mobile
-    $trame-item-size: $content-width / $trame-item-total
+  @return $trame-item-width
 
-  @else
-    $trame-item-size: calc((#{$content-width} - #{$menu-width}) / #{$trame-item-total})
 
-  @return $trame-item-size
+@function trame-item-height($vertical)
+  $trame-item-height: (1 / ($vertical * 2 - 1)) * 100%
+
+  @return $trame-item-height
 
 
 @function trame-images($horizontal, $vertical)
@@ -36,30 +34,22 @@
   @return $trame-item-image
 
 
-@function trame-positions($horizontal, $vertical, $screen-size: desktop)
+@function trame-positions($horizontal, $vertical)
   $trame-item-position: null
 
   @for $horizontal-item from 1 through $horizontal
-    $position-left: $horizontal-item - 1
-    $position-x: calc(#{$position-left} * #{trame-item-size($horizontal, $screen-size)} * 2)
+    $position-x: ($horizontal-item - 1) * (100% / ($horizontal - 1))
 
     @for $vertical-item from 1 through $vertical
       $position-top: $vertical-item - 1
-      $position-y: calc(#{$position-top} * #{trame-item-size($horizontal, $screen-size)} * 2)
+      $position-y: ($vertical-item - 1) * (100% / ($vertical - 1))
 
       $trame-item-position: $trame-item-position $position-x $position-y#{','}
 
   @return $trame-item-position
 
 
-@function trame-sizes($horizontal, $screen-size: desktop)
-  $trame-item-width: null
-  $trame-item-width: $trame-item-width trame-item-size($horizontal, $screen-size) trame-item-size($horizontal, $screen-size)
-
-  @return $trame-item-width
-
-
-@function trame-sizes-animation($item, $horizontal, $total, $screen-size: desktop)
+@function trame-sizes-animation($item, $horizontal, $vertical, $total)
   $trame-sizes-animation: null
 
   @for $i from 1 through $total
@@ -67,10 +57,10 @@
       $trame-sizes-animation: $trame-sizes-animation 0 0#{','}
 
     @if $i <= $item - $total + 1
-      $trame-sizes-animation: $trame-sizes-animation trame-sizes($horizontal, $screen-size)#{','}
+      $trame-sizes-animation: $trame-sizes-animation trame-item-width($horizontal) trame-item-width($vertical)#{','}
 
     @if $i <= $item and not ($i <= $item - $total + 1)
       $steps: (1 / $total * ($item - $i + 1))
-      $trame-sizes-animation: $trame-sizes-animation calc(#{trame-item-size($horizontal, $screen-size)} * #{$steps}) calc(#{trame-item-size($horizontal, $screen-size)} * #{$steps})#{','}
+      $trame-sizes-animation: $trame-sizes-animation trame-item-width($horizontal) * $steps trame-item-height($vertical) * $steps #{','}
 
   @return $trame-sizes-animation
