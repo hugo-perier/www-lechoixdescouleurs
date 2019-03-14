@@ -7,7 +7,7 @@ $(document).ready(function() {
   });
 
   // Scrolldown
-  $('#home header').append('<button id="scroll-down" type="button">découvrir</button>');
+  $('#home header').append('<button id="scroll-down" type="button">Imaginer, révéler, déployer, changer.</button>');
 
   $('#scroll-down').on('click',function(){
     $('html, body').animate({scrollTop: $("main").offset().top}, 500);

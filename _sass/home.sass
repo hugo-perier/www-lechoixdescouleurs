@@ -16,22 +16,17 @@
     #scroll-down
       align-self: flex-start
       align-items: center
-      background: none
+      background: radial-gradient(#343434 50%, transparent 55%) 0 .35em/1em 1em no-repeat
       border: none
       color: $grey
       display: flex
       font: inherit
       font-size: $font-normal
-      outline: inherit
-      padding: 0
       margin: 2.5em 0
-
-      &::before
-        content: '↓'
-        font-size: .9em
-        margin-right: .5em
-        transition: margin-right 200ms
+      outline: inherit
+      padding: 0 1.35em
+      transition: background-position 500ms ease-in-out, padding 500ms ease-in-out
 
       &:hover
-        &::before
-          margin-right: 1em
+        background-position: 100% .35em
+        padding: 0 1.35em 0 0
