@@ -1,6 +1,8 @@
+html, body, a, a:hover, button, button:hover
+  cursor: none
+
 body
   box-sizing: border-box
-  cursor: none
   font-family: 'Raleway', Helvetica, Arial, sans-serif
   font-size: $font-normal
   font-weight: $regular
@@ -18,9 +20,6 @@ body
 
     header, main, footer
       grid-column: 2
-
-*:hover
-  cursor: none
 
 header, main, footer
   padding: $section-vertical-padding $main-horizontal-padding
@@ -64,14 +63,18 @@ main
       @include color-trame(5, 3, mobile)
 
 #mouse
-  background-color: $dark
+  background-color: currentColor
   border-radius: 100%
-  box-shadow: -0.25em -0.25em 0 .75em $dark
+  border: solid 1px currentColor/* Chrome hack */
+  box-shadow: 0 0 0 .85em currentColor
+  color: $grey
   height: 1px
+  pointer-events: none
   position: absolute
-  transition: box-shadow 250ms ease
+  transition: box-shadow 250ms ease, color 250ms ease
   width: 1px
   z-index: 99
 
   &.hover
-    box-shadow: -.25em -.25em 0 1.25em $dark
+    box-shadow: 0 0 0 .35em currentColor
+    color: $dark

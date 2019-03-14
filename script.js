@@ -101,7 +101,7 @@ $(document).ready(function() {
       $('#mouse').css('left', currentMousePos.x);
       $('#mouse').css('top', currentMousePos.y);
 
-      $('a').hover(
+      $('a, #scroll-down').hover(
         function() {
           $('#mouse').addClass('hover');
         }, function() {
