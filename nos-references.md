@@ -4,6 +4,7 @@ layout: default
 navigation: menu
 order: 4
 title: Nos références
+liens-formations: non
 ---
 
 ### Nous avons travaillé avec

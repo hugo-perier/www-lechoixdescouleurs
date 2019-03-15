@@ -4,6 +4,7 @@ id: transformation-entreprise
 layout: default
 order: 1
 title: Construire un projet de transformation d'entreprise
+liens-formations: oui
 ---
 
 Pour tout responsable de projet de transformation en entreprise et qui doit intégrer l’accompagnement humain du changement dans l’organisation.

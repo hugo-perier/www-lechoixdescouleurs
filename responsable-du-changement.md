@@ -4,6 +4,7 @@ id: responsable-changement
 layout: default
 order: 2
 title: Responsable du changement
+liens-formations: oui
 ---
 
 ### Objectifs de la formation

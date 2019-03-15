@@ -4,6 +4,7 @@ layout: default
 navigation: menu
 order: 1
 title: Coaching, team building, formation & conseil
+liens-formations: oui
 ---
 
 **Notre vocation**
