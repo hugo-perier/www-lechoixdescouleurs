@@ -4,7 +4,7 @@ id: custom
 layout: default
 order: 4
 title: Formation sur-mesure ?
-liens-formations: oui
+liens-formations: non
 ---
 
-[Contactez-nous](http://lechoixdescouleurs.fr/contact)
+Nous pouvons élaborer une ou plusieurs formations selon vos besoins ! [Contactez-nous](http://lechoixdescouleurs.fr/contact) pour en savoir plus.

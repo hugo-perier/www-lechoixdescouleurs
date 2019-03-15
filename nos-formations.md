@@ -6,5 +6,3 @@ order: 2
 title: Nos formations
 liens-formations: oui
 ---
-
-Découvrez nos formations
