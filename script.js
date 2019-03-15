@@ -1,10 +1,12 @@
 $(document).ready(function() {
   // ScrollReveal
+  ScrollReveal({ duration: 750 })
   ScrollReveal().reveal('nav', { delay: 500 });
   ScrollReveal().reveal('h1');
   ScrollReveal().reveal('h2, header button', { delay: 300 });
   ScrollReveal().reveal('main > *, footer > h4, footer > p', {delay: 100, distance: '30px'});
   ScrollReveal().reveal('main > section ul li, #contact-list li', {delay: 100, distance: '30px', interval: 250 });
+  ScrollReveal().reveal('#references main > ul li', {delay: 100, distance: '30px', interval: 50 });
 
   // Submenu
   $('#submenu li.active').append('<ul id="anchors"></ul>');
