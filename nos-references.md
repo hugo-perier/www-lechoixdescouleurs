@@ -20,4 +20,4 @@ liens-formations: non
 [//]: # (Garder le titre Annual assessments au dessus du vrai titre pour le lien du footer)
 ### Annual assessments
 ### Nos évaluations annuelles
-- [Évaluation de l'année 2015](/images/evaluation-2015.pdf)
+- [Évaluation de l'année 2016](/images/evaluations/evaluation-2016.pdf)
