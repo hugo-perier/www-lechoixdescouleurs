@@ -1,6 +1,10 @@
 html, body, a, a:hover, button, button:hover
   cursor: none
 
+html.sr
+  nav, h1, h2, header button, main > *
+    visibility: hidden
+
 body
   box-sizing: border-box
   font-family: 'Raleway', Helvetica, Arial, sans-serif
@@ -23,6 +27,9 @@ body
 
 header, main, footer
   padding: $section-vertical-padding $main-horizontal-padding
+
+#scroll-down
+  display: none
 
 a
   color: inherit

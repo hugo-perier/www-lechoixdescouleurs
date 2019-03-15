@@ -1,4 +1,11 @@
 $(document).ready(function() {
+  // ScrollReveal
+  ScrollReveal().reveal('nav', { delay: 500 });
+  ScrollReveal().reveal('h1');
+  ScrollReveal().reveal('h2, header button', { delay: 300 });
+  ScrollReveal().reveal('main > *, footer > h4, footer > p', {delay: 100, distance: '30px'});
+  ScrollReveal().reveal('main > section ul li, #contact-list li', {delay: 100, distance: '30px', interval: 250 });
+
   // Submenu
   $('#submenu li.active').append('<ul id="anchors"></ul>');
 
@@ -7,8 +14,6 @@ $(document).ready(function() {
   });
 
   // Scrolldown
-  $('#home header').append('<button id="scroll-down" type="button">Imaginer, révéler, déployer, changer.</button>');
-
   $('#scroll-down').on('click',function(){
     $('html, body').animate({scrollTop: $("main").offset().top}, 500);
   });
@@ -79,6 +84,7 @@ $(document).ready(function() {
     }
   });
 
+
   // Souris
   var isMobile = false;
   var isMoving = false;
@@ -110,11 +116,11 @@ $(document).ready(function() {
       );
     });
 
-    $(document).scroll(function(event) {
+    $(document).scroll(function() {
       var positionMouse = $('#mouse').offset().top - $(window).scrollTop();
 
       $('#mouse').css('position', 'fixed');
       $('#mouse').css('top', positionMouse);
     });
   }
-  });
+});
