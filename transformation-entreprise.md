@@ -26,7 +26,7 @@ La formation et les connaissances des stagiaires sont évaluées selon les modal
 - Une évaluation de la qualité de la formation à chaud à la fin de la formation, qui porte sur les conditions d’accueil, sur les compétences du formateur et sur l’atteinte des objectifs. Cette évaluation est remise à l’Entreprise par l’organisme de formation à l’issue de la formation.
 - Eventuellement, un système d’évaluation de la formation et des connaissances « à froid » en fonction de l’existence ou non place par l’entreprise de ce type d’évaluation pour l’ensemble de ses formations.
 
-### Nature, caractéristiques et modalités de la formation
+### Nature, caractéris&#173;tiques et modalités de la formation
 - Lieu de la formation : En France
 - Langue de la formation : Français (peut être dispensée en Anglais sur demande)
 - Durée de la formation : 2 jours (14 heures)
