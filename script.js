@@ -1,7 +1,7 @@
 $(document).ready(function() {
   // ScrollReveal
   ScrollReveal({ duration: 750 })
-  ScrollReveal().reveal('nav', { delay: 500 });
+  ScrollReveal().reveal('nav ul li', { delay: 500, interval: 100 });
   ScrollReveal().reveal('h1');
   ScrollReveal().reveal('h2, header button', { delay: 300 });
   ScrollReveal().reveal('main > *, footer > h4, footer > p', {delay: 100, distance: '30px'});
