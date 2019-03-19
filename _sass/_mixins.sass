@@ -9,7 +9,7 @@
         background-size: trame-sizes-animation($item, $horizontal, $vertical, $total-trame) 0 0
 
   &::before
-    animation: trame-animation-#{$total-trame} 1000ms cubic-bezier(.62,1.93,.63,.65) both 500ms
+    animation: trame-animation-#{$total-trame} $total-trame * 50ms cubic-bezier(.62,1.93,.63,.65) both 500ms
     background-image: trame-images($horizontal, $vertical) none
     background-position: trame-positions($horizontal, $vertical) 0 0
     background-repeat: no-repeat
