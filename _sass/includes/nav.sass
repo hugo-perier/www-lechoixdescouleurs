@@ -12,12 +12,13 @@ nav
 
   > ul
     background-color: $white
+    bottom: 0
     box-shadow: -1px 0 0 $grey inset
     box-sizing: border-box
-    height: 100vh
     margin: 0
     overflow-y: auto
     padding-top: 2em
+    position: fixed
     top: 0
     z-index: 9
 
@@ -112,7 +113,6 @@ nav
 @media screen and (min-width: $mobile-menu-mq + 1px)
   nav
     > ul
-      position: sticky
       width: $menu-width
 
     #menu_btn
@@ -127,7 +127,6 @@ nav
     > ul
       box-shadow: 0 0 100vw 100vw rgba(0, 0, 0, 0)
       left: -80vw
-      position: fixed
       transition: box-shadow 300ms ease-in 150ms, left 300ms ease-in 150ms
       width: 80vw
 
