@@ -2,6 +2,14 @@
 Site internet de Le choix des couleurs.
 
 # Ajouter/éditer/supprimer du contenu sur le site
+## Faire un commit sur Github
+1. Sélectionner le fichier à modifier ;
+2. Cliquer sur l'icone de crayon pour éditer ce dernier ;
+3. Faire les modifications souhaitées ;
+4. Dans le panneau **Commit changes** situé en bas de la page, écrire un titre qui explique brièvement les modifications apportées ;
+5. Cliquer sur le bouton **Commit changes** pour mettre en production les modifications.
+6. Attendre quelques secondes, puis recharger la page du site pour voir ces modifications apparaître ! 
+
 ## Organisation des fichiers
 Depuis le répertoire de base, il y a 4 différents éléments sur lesquels on peut agir :
 1. **_config.yml ➞** Les informations de base du site (titre, descriptions, coordonnées…) ;
