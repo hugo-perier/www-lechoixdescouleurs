@@ -5,13 +5,13 @@ Site internet de Le choix des couleurs.
 ## Sommaire
 1. [Faire un commit sur Github](#faire-un-commit-sur-github)
 2. [Organisation des fichiers](#organisation-des-fichiers)
-   1. [_config.yml](1-_configyml)
-   2. [Les fichiers .md](2-les-fichiers-md)
-   3. [Les composants _includes](3-les-composants-_includes)
-   4. [Le dossier images](4-le-dossier-images)
+   1. [_config.yml](#1-_configyml)
+   2. [Les fichiers .md](#2-les-fichiers-md)
+   3. [Les composants _includes](#3-les-composants-_includes)
+   4. [Le dossier images](#4-le-dossier-images)
 3. [Écrire en Markdown](#écrire-en-markdown)
 4. [Règles d'écriture spécifiques](#règles-décriture-spécifiques)
-5. [TIPS : comment ajouter une évaluation annuelle ?](tips--comment-ajouter-une-évaluation-annuelle-)
+5. [TIPS : comment ajouter une évaluation annuelle ?](#tips--comment-ajouter-une-évaluation-annuelle-)
 
 ## Faire un commit sur Github
 1. Sélectionner le fichier à modifier ;
