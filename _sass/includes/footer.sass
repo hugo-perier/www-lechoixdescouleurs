@@ -1,0 +1,71 @@
+footer
+  background: $grey
+  color: $white
+  display: table
+
+  @media screen and (min-width: 700px)
+    background: url('../images/logo.svg') bottom left / column(1,6) content-box no-repeat, $grey
+
+
+  &::before
+    border-top: solid 1px currentColor
+    content: ''
+    display: table-cell
+    width: $main-horizontal-padding
+
+  > *
+    padding-left: 2rem
+
+  h4
+    font-size: $font-large
+    font-weight: $bold
+    margin-top: 0
+
+  ul
+    display: flex
+    justify-content: flex-end
+    list-style: none
+
+    li
+      margin-left: 1em
+
+  ul:nth-of-type(1)
+    margin-top: 5em
+
+    li
+      a
+        font-size: 0
+
+        $link-list: phone mail linkedin
+
+        @each $link in $link-list
+          &.#{$link}::before
+            content: url('../images/contact/#{$link}-icon.svg')
+
+        &::before
+          align-items: center
+          background-color: $dark
+          border: solid 1px $dark
+          border-radius: 100%
+          box-shadow: 0 0 0 0 $dark
+          display: flex
+          height: $font-extra-large
+          justify-content: center
+          transition: box-shadow 200ms
+          width: $font-extra-large
+
+        &:hover
+          &::before
+            box-shadow: 0 0 0 4px $dark
+
+
+  ul:nth-of-type(2)
+    font-size: $font-small
+
+    li
+      & + li
+        border-left: solid 1px
+        padding-left: 1em
+
+      a
+        text-decoration: none

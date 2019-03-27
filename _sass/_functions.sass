@@ -1,0 +1,66 @@
+// column
+@function column($c-number, $c-total)
+  @return $c-number / $c-total * 100vw
+
+
+
+// Pick a color
+@function color($number: random($random-colors-nth))
+  @return map-get($random-colors, $number)
+
+
+
+// trame
+@function trame-item-width($horizontal)
+  $trame-item-width: (1 / ($horizontal * 2 - 1)) * 100%
+
+  @return $trame-item-width
+
+
+@function trame-item-height($vertical)
+  $trame-item-height: (1 / ($vertical * 2 - 1)) * 100%
+
+  @return $trame-item-height
+
+
+@function trame-images($horizontal, $vertical)
+  $trame-item-image: null
+
+  @for $vertical-item from 1 through $vertical
+
+    @for $horizontal-item from 1 through $horizontal
+      $trame-item-image: $trame-item-image radial-gradient(color() 65%, transparent 65% + $horizontal / 3)#{','}
+
+  @return $trame-item-image
+
+
+@function trame-positions($horizontal, $vertical)
+  $trame-item-position: null
+
+  @for $horizontal-item from 1 through $horizontal
+    $position-x: ($horizontal-item - 1) * (100% / ($horizontal - 1))
+
+    @for $vertical-item from 1 through $vertical
+      $position-top: $vertical-item - 1
+      $position-y: ($vertical-item - 1) * (100% / ($vertical - 1))
+
+      $trame-item-position: $trame-item-position $position-x $position-y#{','}
+
+  @return $trame-item-position
+
+
+@function trame-sizes-animation($item, $horizontal, $vertical, $total)
+  $trame-sizes-animation: null
+
+  @for $i from 1 through $total
+    @if $i > $item
+      $trame-sizes-animation: $trame-sizes-animation 0 0#{','}
+
+    @if $i <= $item - $total + 1
+      $trame-sizes-animation: $trame-sizes-animation trame-item-width($horizontal) trame-item-width($vertical)#{','}
+
+    @if $i <= $item and not ($i <= $item - $total + 1)
+      $steps: (1 / $total * ($item - $i + 1))
+      $trame-sizes-animation: $trame-sizes-animation trame-item-width($horizontal) * $steps trame-item-height($vertical) * $steps #{','}
+
+  @return $trame-sizes-animation

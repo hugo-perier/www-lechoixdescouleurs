@@ -1,0 +1,15 @@
+<section>
+  <p>Découvrez nos formations</p>
+  <ul>
+    {% assign formationlist = site.pages | sort:"order" %}
+    {% for formationlist-item in formationlist %}
+    {% if formationlist-item.category == 'Nos formations' %}
+    {% unless formationlist-item.title == page.title %}
+    <li>
+      <a class="{{ formationlist-item.id }}" href="{{ formationlist-item.url }}">{{ formationlist-item.title }}</a>
+    </li>
+    {% endunless %}
+    {% endif %}
+    {% endfor %}
+  </ul>
+</section>

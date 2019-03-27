@@ -1,0 +1,187 @@
+nav
+  ul
+    line-height: 1.5
+    list-style-type: none
+    padding-left: 0
+
+    li
+      a
+        display: block
+        text-decoration: none
+        padding: .75rem 1rem .75rem 3.5rem
+
+  > ul
+    background-color: $white
+    bottom: 0
+    box-shadow: -1px 0 0 $grey inset
+    box-sizing: border-box
+    margin: 0
+    overflow-y: auto
+    padding-top: 2em
+    position: fixed
+    top: 0
+    z-index: 9
+
+    > li:last-child
+      margin-bottom: 2em
+
+  > ul, > ul > li > ul
+    > li:not(#menu-item-formations)
+      position: relative
+
+      &::before
+        background-clip: content-box
+        background-color: $grey
+        border-radius: 100%
+        box-sizing: border-box
+        content: ''
+        height: 1em
+        left: 1.75em
+        padding: .35em
+        position: absolute
+        transition: padding 250ms ease
+        top: .95em
+        width: 1em
+
+      &:hover
+        &::before
+          padding: .15em
+
+      &.active
+        &::before
+          background-color: $dark
+          padding: 0
+
+
+    li#menu-item-home
+      a
+        font-size: 0
+
+        &::before
+          content: 'Accueil'
+          display: block
+          font-size: $font-normal
+
+    li#menu-item-formations
+      > a
+        pointer-events: none
+
+    li#menu-item-formations
+      &::before, &::after
+        background-color: $grey
+        content: ''
+        display: block
+        height: 1px
+        margin: .5em 0 .5em 3.5rem
+        width: 2em
+
+      > a
+        font-size: .7em
+        font-weight: $bold
+        padding-bottom: 0
+
+
+  ul#anchors
+    font-size: $font-small
+    padding-bottom: 1em
+
+    li
+      a
+        color: lighten($grey, 50)
+        display: flex
+        padding: .35rem 2rem .35rem 3.5rem
+        transition: color 250ms ease, padding 250ms ease
+
+        &::before
+          background-color: currentColor
+          content: ''
+          height: 1px
+          margin: .75em 1em auto -1rem
+          transition: min-width 250ms ease
+          min-width: 1rem
+
+      &.current, &:hover
+        a
+          color: $dark
+          padding-right: 1rem
+
+          &::before
+            min-width: 2rem
+
+
+
+@media screen and (min-width: $mobile-menu-mq + 1px)
+  nav
+    > ul
+      width: $menu-width
+
+    #menu_btn
+      display: none
+
+
+@media screen and (max-width: $mobile-menu-mq)
+  nav
+    ul#anchors
+      display: none
+
+    > ul
+      box-shadow: 0 0 100vw 100vw rgba(0, 0, 0, 0)
+      left: -80vw
+      transition: box-shadow 300ms ease-in 150ms, left 300ms ease-in 150ms
+      width: 80vw
+
+      li
+        opacity: 0
+        transition: opacity 250ms ease-in
+
+        @for $i from 1 through 9
+          &:nth-of-type(#{$i})
+            transition-delay: $i * 75ms + 500ms
+
+    #menu_btn
+      background: $dark
+      border: solid 1px
+      border-radius: 100%
+      box-shadow: 0 0 2px 0 $dark
+      height: 4em
+      left: -2.15em
+      position: fixed
+      top: 1.5em
+      transition: box-shadow 250ms ease 150ms, left 300ms ease-in 150ms
+      width: 4em
+      z-index: 10
+
+      span
+        background-color: $white
+        height: 2px
+        left: 50%
+        position: absolute
+        top: 1.5em
+        transition: left 250ms 750ms, width 250ms 750ms
+        width: 1.25em
+        z-index: 2
+
+        &:nth-of-type(2)
+          top: 2em
+          width: 1em
+
+        &:nth-of-type(3)
+          top: 2.5em
+          width: .5em
+
+    // open state
+    &:hover
+      #menu_btn
+        box-shadow: 0 0 2px 4px $dark
+        left: calc(80vw - 2em)
+
+        span
+          left: calc(50% - .75em)
+          width: 1.5em
+
+    #menu_btn:hover ~ ul, > ul:hover
+      box-shadow: 0 0 100vw 100vw rgba(0, 0, 0, .15)
+      left: 0
+
+      li
+        opacity: 1

@@ -1,0 +1,38 @@
+#home
+  header
+    border-bottom: solid 1px $grey-light
+    display: flex
+    flex-direction: column
+
+    h1, h2
+      order: -1
+
+    h1
+      background: url('../images/logo-black.svg') 0 0 / contain no-repeat
+      font-size: 0
+      height: column(1 / (500 / 280),6)
+      margin-bottom: 1.5rem
+      min-height: 5.6rem
+      min-width: 10rem
+      width: column(1,6)
+
+    h2
+      max-width: 15em
+
+    #scroll-down
+      align-self: flex-start
+      align-items: center
+      background: radial-gradient(#343434 50%, transparent 55%) 0 .35em/1em 1em no-repeat
+      border: none
+      color: $grey
+      display: flex
+      font: inherit
+      font-size: $font-normal
+      margin: 2.5em 0
+      outline: inherit
+      padding: 0 1.35em
+      transition: background-position 500ms ease-in-out, padding 500ms ease-in-out
+
+      &:hover
+        background-position: 100% .35em
+        padding: 0 1.35em 0 0

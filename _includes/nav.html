@@ -1,0 +1,24 @@
+<nav onclick="/* iOS hack */">
+  <ul>
+    {% assign menu = site.pages | sort:"order" %}
+    {% for menu-item in menu %}
+    {% if menu-item.navigation == "menu" %}
+      <li id="menu-item-{{ menu-item.id }}" {% if menu-item.url == page.url %} class="active" {% endif %}>
+        <a href="{{ menu-item.url }}">{{ menu-item.title }}</a>
+        {% if menu-item.id == "formations" %}
+        <ul id="submenu">
+          {% assign submenu = site.pages | sort:"order" %}
+          {% for submenu-item in submenu %}
+          {% if submenu-item.category == menu-item.title %}
+          <li {% if submenu-item.url == page.url %} class="active" {% endif %}>
+            <a href="{{ submenu-item.url }}">{{ submenu-item.title }}</a>
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</nav>

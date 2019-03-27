@@ -1,0 +1,14 @@
+# Site settings
+title: Le choix des couleurs
+email: contact@lechoixdescouleurs.fr
+description: Coaching, team building, formation & conseil
+url: "http://lechoixdescouleurs.fr"
+linkedin: https://www.linkedin.com/in/val%C3%A9rie-perier-5a856153/
+phone: +33 6 27 32 27 12
+
+plugins:
+- jekyll-autoprefixer
+
+autoprefixer:
+  browsers:
+  - last 2 versions

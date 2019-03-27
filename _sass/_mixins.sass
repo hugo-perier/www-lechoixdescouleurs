@@ -1,0 +1,62 @@
+// Color trame
+@mixin color-trame($horizontal, $vertical)
+  $total-trame: $horizontal * $vertical
+  $total-keyframes: $horizontal * $vertical * 2 - 1
+
+  @keyframes trame-animation-#{$total-trame}
+    @for $item from 0 through $total-keyframes
+      #{round(percentage($item / $total-keyframes))}
+        background-size: trame-sizes-animation($item, $horizontal, $vertical, $total-trame) 0 0
+
+  &::before
+    animation: trame-animation-#{$total-trame} $total-trame * 50ms cubic-bezier(.62,1.93,.63,.65) both 500ms
+    background-image: trame-images($horizontal, $vertical) none
+    background-position: trame-positions($horizontal, $vertical) 0 0
+    background-repeat: no-repeat
+    background-size: trame-item-width($horizontal) trame-item-width($vertical)
+    content: ''
+    display: block
+    padding-top: 100% / (($horizontal * 2 - 1) / ($vertical * 2 - 1))
+    width: 100%
+
+
+// Formation list
+@mixin formations-list($color-number)
+  background-color: color($color-number)
+  transition: background-color 250ms, box-shadow 250ms ease
+
+  &:hover
+    background-color: darken(color($color-number), 15)
+    box-shadow: 0 0 0 4px darken(color($color-number), 15)
+
+
+// Grid list
+@mixin grid-list($min)
+  display: grid
+  grid-gap: 1em
+  grid-template-columns: repeat(auto-fill, minmax($min, 1fr))
+  list-style-type: none
+  margin-top: 2em
+  padding-left: 0
+
+  li
+    margin: 0
+
+
+// Link list
+@mixin link-list
+  li
+    border: solid 4px currentColor
+    color: color(15)
+    transition: box-shadow 250ms ease
+
+    &:hover
+      box-shadow: 0 0 0 4px currentColor
+
+    a
+      box-sizing: border-box
+      display: block
+      padding: 1em 2em
+
+      @media screen and (max-width: 30em)
+        padding: 1em

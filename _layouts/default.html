@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link href="/images/favicon.svg" type="image/svg" rel="shortcut icon">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" >
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400' rel='stylesheet' type='text/css'>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  </head>
+  <body id="{{ page.id }}">
+    {% include nav.html %}
+    <header onclick="/* iOS hack */">
+      <h1>
+        {{ site.title }}
+        {% if page.category %} - {{ page.category }}{% endif %}
+      </h1>
+      <h2>{{ page.title }}</h2>
+      <button id="scroll-down" type="button">Imaginer, révéler, déployer, changer.</button>
+    </header>
+    <main onclick="/* iOS hack */">
+      {{ content }}
+      {% if page.liens-formations == "oui" %}
+        {% include pre-footer.html %}
+      {% endif %}
+    </main>
+    {% include footer.html %}
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

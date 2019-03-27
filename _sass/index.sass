@@ -1,0 +1,90 @@
+html, body, a, a:hover, button, button:hover
+  cursor: none
+
+html.sr
+  nav > ul > li, h1, h2, header button, main > *
+    visibility: hidden
+
+body
+  box-sizing: border-box
+  font-family: 'Raleway', Helvetica, Arial, sans-serif
+  font-size: $font-normal
+  font-weight: $regular
+  line-height: 1.7
+  margin: 0
+
+  @media screen and (min-width: $mobile-menu-mq + 1px)
+    display: grid
+    grid-template-columns: $menu-width auto
+
+    nav
+      grid-column: 1
+      grid-row: 1 / 4
+      vertical-align: top
+
+    header, main, footer
+      grid-column: 2
+
+header, main, footer
+  padding: $section-vertical-padding $main-horizontal-padding
+
+#scroll-down
+  display: none
+
+a
+  color: inherit
+
+h1
+  font-size: $font-normal
+  line-height: 1.4
+
+h2, h3, h4, h5, h6
+  hyphens: manual
+  line-height: 1.1
+  overflow-wrap: break-word
+
+h2
+  font-size: $font-extra-large
+  margin-top: 0
+
+h3
+  border-top: solid 1px $grey-light
+  font-size: $font-extra-large
+  font-weight: $regular
+  margin: $section-vertical-padding calc(-#{$main-horizontal-padding}) 0
+  padding: $section-vertical-padding $main-horizontal-padding 0
+
+
+main
+  ul
+    list-style-type: '• '
+    padding-left: 1em
+
+    li
+      margin: .75em 0
+
+
+#home, #contact
+  header
+    @include color-trame(9, 3)
+    padding-bottom: 0
+
+    @media screen and (max-width: $mobile-menu-mq)
+      @include color-trame(5, 3)
+
+#mouse
+  background-color: currentColor
+  border-radius: 100%
+  border: solid 1px currentColor/* Chrome hack */
+  box-shadow: 0 0 0 .7em currentColor
+  color: $dark
+  height: 1px
+  pointer-events: none
+  position: absolute
+  top: -50px
+  transition: box-shadow 250ms ease
+  width: 1px
+  z-index: 99
+
+  &.hover
+    box-shadow: 0 0 0 .3em currentColor
