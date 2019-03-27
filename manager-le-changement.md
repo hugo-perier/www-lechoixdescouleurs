@@ -38,6 +38,6 @@ La formation et les connaissances des stagiaires sont évaluées selon les modal
 - Intervenante : Valérie Périer
 
 ### Budget
-Le tarif 2017 pour la journée de formation :
+Le tarif 2019 pour la journée de formation :
 - Individuel : 390€ HT /jour
 - Groupe : 1950 € HT/jour
