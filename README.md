@@ -53,10 +53,18 @@ Dans ce dossier, les fichiers sont écrits en Html. Mieux vaut ne pas s'avanture
   ```
 
 ### 4. Le dossier images
-Toutes les images qui sont sur le site doivent se trouver dans ce dossier. Il est important de bien ranger ses images ! Pour ce faire on peut créer des dossiers, des sous-dossiers, etc. Ensuite pour importer une image dans une page, on va écrire :
+Toutes les images qui sont sur le site doivent se trouver dans ce dossier. Il est important de bien ranger ses images ! Pour ce faire on peut créer des dossiers, des sous-dossiers, etc. Voici la marche à suivre pour importer de nouvelles images :
+1. Se rendre dans le dossier souhaité pour la destination de l'image ;
+2. Une fois dans le bon dossier, on clique sur le bouton **Upload files** pour importer un ou plusieurs fichiers (.jpg, .png, .pdf…) ;
+3. Valider le commit ;
+4. Dans une page, importer une image en écrivant :
 ```html
-![Nom de l'image](/images/nom-du-dossier/nom-du-fichier.jpg)
+![Nom de l'image](/images/nom-du-dossier/nom-du-fichier.extension)
+--
+exemple pour le logo APRIL.jpg, écrire :
+![Logo April](/images/references/APRIL.jpg)
 ```
+_Attention aux majuscules et éviter de mettre des espaces et des accents dans les noms des fichiers !_
 
 ## Écrire en Markdown
 Rien de plus simple ! C'est très bien expliqué sur ce site : https://guides.github.com/features/mastering-markdown/#syntax
