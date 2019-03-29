@@ -22,7 +22,9 @@ footer
     margin-top: 0
 
   ul
+    display: -ms-flexbox
     display: flex
+    -ms-flex-pack: end
     justify-content: flex-end
     list-style: none
 
@@ -43,13 +45,16 @@ footer
             content: url('../images/contact/#{$link}-icon.svg')
 
         &::before
+          -ms-flex-align: center
           align-items: center
           background-color: $dark
           border: solid 1px $dark
           border-radius: 100%
           box-shadow: 0 0 0 0 $dark
+          display: -ms-flexbox
           display: flex
           height: $font-extra-large
+          -ms-flex-pack: center
           justify-content: center
           transition: box-shadow 200ms
           width: $font-extra-large

@@ -14,15 +14,19 @@ body
   margin: 0
 
   @media screen and (min-width: $mobile-menu-mq + 1px)
+    display: -ms-grid
     display: grid
+    -ms-grid-columns: $menu-width auto
     grid-template-columns: $menu-width auto
 
     nav
+      -ms-grid-column: 1
       grid-column: 1
       grid-row: 1 / 4
       vertical-align: top
 
     header, main, footer
+      -ms-grid-column: 2
       grid-column: 2
 
 header, main, footer
@@ -39,6 +43,8 @@ h1
   line-height: 1.4
 
 h2, h3, h4, h5, h6
+  -webkit-hyphens: manual
+  -ms-hyphens: manual
   hyphens: manual
   line-height: 1.1
   overflow-wrap: break-word
