@@ -22,17 +22,39 @@
     #scroll-down
       align-self: flex-start
       align-items: center
-      background: radial-gradient(#343434 50%, transparent 55%) 0 .35em/1em 1em no-repeat
+      background: radial-gradient(transparent 62%, currentColor 65%, transparent 68%) .6em .56em / 2.5em 2.5em no-repeat, transparent
       border: none
       color: $grey
       display: flex
       font: inherit
       font-size: $font-normal
-      margin: 2.5em 0
+      margin: 2.5em 0 2.5em -.5em
       outline: inherit
-      padding: 0 1.35em
-      transition: background-position 500ms ease-in-out, padding 500ms ease-in-out
+      padding: 1em
+      text-indent: .5em
+      transition: text-indent 250ms ease
+
+      &::before
+        border-bottom: solid 1px
+        border-left: solid 1px
+        content: ''
+        height: .75em
+        margin: auto 1em 0 -.2em
+        transform: rotate(-45deg) translateY(-.35em)
+        width: .75em
+
+      &::after
+        background-color: currentColor
+        content: ''
+        height: 1.25em
+        margin: 0 0 0 .8em
+        order: -1
+        transition: height 250ms ease, margin 250ms ease
+        width: 1px
 
       &:hover
-        background-position: 100% .35em
-        padding: 0 1.35em 0 0
+        text-indent: 1em
+
+        &::after
+          height: 3em
+          margin: -1em 0 -1em .8em
