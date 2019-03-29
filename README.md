@@ -2,6 +2,17 @@
 Site internet de Le choix des couleurs.
 
 # Ajouter/éditer/supprimer du contenu sur le site
+## Sommaire
+1. [Faire un commit sur Github](#faire-un-commit-sur-github)
+2. [Organisation des fichiers](#organisation-des-fichiers)
+   1. [_config.yml](#1-_configyml)
+   2. [Les fichiers .md](#2-les-fichiers-md)
+   3. [Les composants _includes](#3-les-composants-_includes)
+   4. [Le dossier images](#4-le-dossier-images)
+3. [Écrire en Markdown](#écrire-en-markdown)
+4. [Règles d'écriture spécifiques](#règles-décriture-spécifiques)
+5. [TIPS : comment ajouter une évaluation annuelle ?](#tips--comment-ajouter-une-évaluation-annuelle-)
+
 ## Faire un commit sur Github
 1. Sélectionner le fichier à modifier ;
 2. Cliquer sur l'icone de crayon pour éditer ce dernier ;
@@ -39,7 +50,7 @@ Il est possible d'éditer les informations suivantes :
 
 >Les identifiants **category** et **navigation** sont incompatibles. Pour une page qui présente un formation, il sera utilisé **category : Nos formations**, pour toute autre page du site qui doit apparaître dans le menu ou dans le bas de page il sera utilisé **navigation**.
 
-2. **contenu ➞** C'est le contenu du site qui va apparaître sur la page. Pour écrire le contenu, il faut utiliser la syntaxe **[Markdown](#écrire-en-markdown)** et les **[Règles d'écriture](#règles-d-écriture-specifiques)** expliqués ci-dessous.
+2. **contenu ➞** C'est le contenu du site qui va apparaître sur la page. Pour écrire le contenu, il faut utiliser la syntaxe **[Markdown](#écrire-en-markdown)** et les **[Règles d'écriture](#règles-décriture-spécifiques)** expliqués ci-dessous.
 
 ### 3. Les composants _includes
 Dans ce dossier, les fichiers sont écrits en Html. Mieux vaut ne pas s'avanturer dans la modification sans être sûr de ce que l'on fait. Cependant, dans le fichier footer.html, il y a deux éléments qui peuvent être modifiés facilement :
@@ -53,10 +64,18 @@ Dans ce dossier, les fichiers sont écrits en Html. Mieux vaut ne pas s'avanture
   ```
 
 ### 4. Le dossier images
-Toutes les images qui sont sur le site doivent se trouver dans ce dossier. Il est important de bien ranger ses images ! Pour ce faire on peut créer des dossiers, des sous-dossiers, etc. Ensuite pour importer une image dans une page, on va écrire :
+Toutes les images qui sont sur le site doivent se trouver dans ce dossier. Il est important de bien ranger ses images ! Pour ce faire on peut créer des dossiers, des sous-dossiers, etc. Voici la marche à suivre pour importer de nouvelles images :
+1. Se rendre dans le dossier souhaité pour la destination de l'image ;
+2. Une fois dans le bon dossier, on clique sur le bouton **Upload files** pour importer un ou plusieurs fichiers (.jpg, .png, .pdf…) ;
+3. Valider le commit ;
+4. Dans une page, importer une image en écrivant :
 ```html
-![Nom de l'image](/images/nom-du-dossier/nom-du-fichier.jpg)
+![Nom de l'image](/images/nom-du-dossier/nom-du-fichier.extension)
+--
+exemple pour le logo APRIL.jpg, écrire :
+![Logo April](/images/references/APRIL.jpg)
 ```
+_Attention aux majuscules et éviter de mettre des espaces et des accents dans les noms des fichiers !_
 
 ## Écrire en Markdown
 Rien de plus simple ! C'est très bien expliqué sur ce site : https://guides.github.com/features/mastering-markdown/#syntax
