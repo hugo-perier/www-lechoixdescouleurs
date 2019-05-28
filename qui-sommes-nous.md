@@ -12,8 +12,5 @@ Spécialisé dans l’accompagnement des changements et des transformations, Le 
 L’accompagnement et les formations ont lieu dans les locaux de l’entreprise cliente ou dans des lieux étant habilités à recevoir du public (lieux de séminaires, de formation, de co-working …)
 
 ### Nos partenaires
-- Jean-Michel Apathie — Coach
-- [Yann Barthès](http://lechoixdescouleurs.fr) — Coaching en entreprise
-- Michel Denisot — Directeur général
-- Alain Badou — Psycho-thérapeute
-- Jean-Michel Apathie — Coach
+- [Didascalis](http://didascalis.com) - Coaching - Formation
+- Soliman Coaching - Coaching - Formation
