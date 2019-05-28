@@ -15,6 +15,8 @@ Aldes, Alliance et Territoire, Bayer, Boulangeries Genillon, Caisse d'Epargne, C
 - ![HMV](/images/references/HMV.jpg)
 - ![Isere](/images/references/Isere.jpg)
 - ![ALDES](/images/references/ALDES.jpg)
+- ![CERFRANCE](/images/references/CERFRANCE.jpg)
+- ![GENILLON](/images/references/GENILLON.jpg)
 
 [//]: # (Garder le titre Annual assessments au dessus du vrai titre pour le lien du footer)
 ### Annual assessments
