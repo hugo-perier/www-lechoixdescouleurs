@@ -8,7 +8,13 @@ liens-formations: non
 ---
 
 ### Ils nous ont fait confiance
-Alliance et Territoire, Bayer, Boulangeries Genillon, Caisse d'Epargne, Cenexi, Cerfrance, Codexa, Cridon, Danone, LHH Altedia, Merck, Office de Tourisme Haute Maurienne, Prana conseil, Serge Ferrari, Territoire Haut Rhône Dauphiné, Urvika.
+Aldes, Alliance et Territoire, Bayer, Boulangeries Genillon, Caisse d'Epargne, Cenexi, Cerfrance, Codexa, Cridon, Danone, LHH Altedia, Merck, Office de Tourisme Haute Maurienne, Prana conseil, Serge Ferrari, Territoire Haut Rhône Dauphiné, Urvika.
+
+- ![Bayer](/images/references/bayer.png)
+- ![Alliance](/images/references/Alliance.jpg)
+- ![HMV](/images/references/HMV.jpg)
+- ![Isere](/images/references/Isere.jpg)
+- ![ALDES](/images/references/ALDES.jpg)
 
 [//]: # (Garder le titre Annual assessments au dessus du vrai titre pour le lien du footer)
 ### Annual assessments
