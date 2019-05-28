@@ -22,3 +22,4 @@ Aldes, Alliance et Territoire, Bayer, Boulangeries Genillon, Caisse d'Epargne, C
 ### Annual assessments
 ### Nos évaluations annuelles
 - [Évaluation de l'année 2016](/images/evaluations/evaluation-2016.pdf)
+- [Evaluation de l'année 2017](/images/evaluations/Leading Change - Evaluations 2017.pdf)
