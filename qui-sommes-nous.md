@@ -13,7 +13,7 @@ L’accompagnement et les formations ont lieu dans les locaux de l’entreprise 
 
 ### Intervenants
 
-# Valérie Périer
+##### Valérie Périer
 
 Formatrice et Coach professionnel senior, spécialisée dans l’accompagnement des transformations collectives et individuelles. Certiﬁée et supervisée, elle adhère au code de déontologie de l’EMCC.
 
