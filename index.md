@@ -1,6 +1,7 @@
 ---
-id: home
+id: maintenance
 layout: maintenance
+navigation: menu
 order: 1
 title: Coaching, team building, formation & conseil
 ---
