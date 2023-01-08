@@ -1,6 +1,6 @@
 ---
 id: home
-layout: default
+layout: maintenance
 order: 1
 title: Coaching, team building, formation & conseil
 ---
