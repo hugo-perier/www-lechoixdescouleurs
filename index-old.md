@@ -2,7 +2,7 @@
 id: home
 layout: default
 navigation: menu
-order: 1
+order: 2
 title: Coaching, team building, formation & conseil
 liens-formations: oui
 ---
